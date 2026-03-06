@@ -1,0 +1,25 @@
+# Exclude model files - mounted as volume at runtime, do not bake into image
+agentcpm-report-demo/models/
+**/models/
+
+# Git and IDE
+.git
+.gitignore
+.cursor
+.vscode
+*.swp
+*.swo
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache
+.venv
+venv
+.env
+
+# Build artifacts
+*.egg-info
+dist
+build
