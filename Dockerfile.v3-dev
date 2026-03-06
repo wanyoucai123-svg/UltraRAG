@@ -1,4 +1,6 @@
-FROM python:3.11-slim
+# Use 1ms domestic mirror for faster pull in CN networks. Override via build-arg DOCKER_MIRROR.
+ARG DOCKER_MIRROR=docker.1ms.run
+FROM ${DOCKER_MIRROR}/library/python:3.11-slim
 
 # Keep logs unbuffered + make pip/uv nicer in containers
 ENV PYTHONDONTWRITEBYTECODE=1 \
